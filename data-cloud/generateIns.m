@@ -1,0 +1,71 @@
+%% preprocessing
+clear all
+
+% %% seperate traces into instances
+% 
+% load('data') % [timestamp, jobid, event, scheduling class]
+% rawdata(rawdata(:,1)==0,:) = [];
+% rawdata(:,1) = floor(rawdata(:,1)/(1e6) - 600); % time unit to seconds
+% 
+% T = 3600*2; %length of each instance (2 hours)
+% N = floor(max(rawdata(:,1))/T); % number of instances
+% dataIns = cell(N,1);
+% for i = 1:N
+%     dataIns{i} = rawdata((((i-1)*T+1) <= rawdata(:,1))& (rawdata(:,1)<=i*T),:);
+% end
+
+%% generate arrival instance
+load('dataIns')
+K = length(dataIns); % no. of instances
+% K = 1;
+T = 3600*8; % num of time slots in each instance
+
+for k = 1:K
+    jobID = unique(dataIns{k}(:,2),'first','legacy');
+    N = length(jobID);
+    JobIns = cell(N,1);
+    for i=1:N
+      JobIns{i} = dataIns{k}(dataIns{k}(:,2)== jobID(i),:); 
+    end
+
+    arrIns = []; 
+    for i=1:N
+%         if(size(JobIns{i},1)==1)
+%             arrivalTime = ceil(((k-1)*T+1)/60); % 60 second slot
+%             departTime = ceil(JobIns{i}(1,1)/60);
+%             duration = departTime - arrivalTime;
+%             arrIns = [arrIns;arrivalTime,departTime,duration,JobIns{i}(1,4)];
+            
+        if(size(JobIns{i},1)==2) % when the job does not depart 
+            arrivalTime = ceil(JobIns{i}(1,1)/10); % 10 second slot
+            departTime = ceil(k*T/10);
+            duration = departTime - arrivalTime + 1;
+            arrIns = [arrIns;arrivalTime,departTime,duration,JobIns{i}(1,4)];
+            
+        elseif(size(JobIns{i},1)==3) % when the job departs 
+            arrivalTime = ceil(JobIns{i}(1,1)/10); % 10 second slot
+            departTime = ceil(JobIns{i}(3,1)/10);
+            duration = departTime - arrivalTime + 1;
+           arrIns = [arrIns;arrivalTime,departTime,duration,JobIns{i}(1,4)]; 
+        end
+    end
+    
+    arrIns(arrIns(:,3)<10,:) = [];
+    arrIns(arrIns(:,3)>1000,:) = [];
+    [value,idx] = sort(arrIns(:,1));
+    arrIns = arrIns(idx,:);
+    
+    Dmax = max(arrIns(:,3));
+    Dmin = min(arrIns(:,3));
+
+    alpha = Dmax/Dmin;
+
+    save(['arrival_Instance/arrIns',num2str(k)],'arrIns') % save the generated instance to folder arrival_Instance
+end
+
+
+
+
+
+
+
