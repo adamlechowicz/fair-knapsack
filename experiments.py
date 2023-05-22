@@ -38,7 +38,7 @@ def experiment(theta):
     import load_traces
 
     # get traces, L, U, and optimal solutions
-    tracesVal, tracesWgt, L, U, optimalSols, optValDens = load_traces.loadDataAndOPT(theta=theta)
+    tracesVal, tracesWgt, L, U, optimalSols, bestDens = load_traces.loadDataAndOPT(theta=theta)
 
     # let's do some experiments!
 
