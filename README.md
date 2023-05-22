@@ -16,7 +16,7 @@ Our experimental code has been written in Python.  We recommend using a tool to 
 
 1. **knapsack.py** (see Section 4): contains Python implementations of each tested knapsack algorithm, including a dynamic programming optimal solution (note that the DP solution requires integer weights), alongside $\mathsf{ZCL}$, $\mathsf{ECT}$, and $\mathsf{LA\text{-}ECT}$.
 2. **load_traces.py**: loads traces from ``.mat`` files located in ``data-cloud``, computes optimal solutions and $d^*$ values for each trace, and saves traces to a serialized file on disk.
-3. **experiments.py**: code for first experiment (see Section 5), which tests algorithms not using predictions with several values of U/L, then plots CDFs of the empirical competitive ratios.
+3. **experiments.py**: code for first experiment (see Section 5), which tests algorithms not using predictions with several values of $U/L$, then plots CDFs of the empirical competitive ratios.
 4. **experimentsLA.py**: code for second experiment (see Section 5), which tests learning-augmented algorithms with several different error values in prediction, then plots CDFs of the empirical competitive ratios.
 5. **data-cloud**: This folder contains MATLAB code to generate knapsack sequences from the cloud trace data set.  Existing traces will be automatically loaded into Python if running ``experiments*.py``.
 
