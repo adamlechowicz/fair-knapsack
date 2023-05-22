@@ -9,7 +9,6 @@ The online knapsack problem is a classic problem in the field of online algorith
 Our experimental code has been written in Python.  We recommend using a tool to manage Python virtual environments, such as [Miniconda](https://docs.conda.io/en/latest/miniconda.html).  There are several required Python packages:
 - [NumPy](https://numpy.org)
 - [SciPy](https://scipy.org)
-- [tqdm](https://github.com/tqdm/tqdm) for CLI progress bar
 - [Matplotlib](https://matplotlib.org) for creating plots 
 - [seaborn](https://seaborn.pydata.org) for creating plots 
 - [mat4py](https://pypi.org/project/mat4py/) for importing data from MATLAB 
