@@ -30,7 +30,7 @@ Charles Reiss, Alexey Tumanov, Gregory R. Ganger, Randy H. Katz, and Michael A. 
 
 Given a correctly configured Python environment, with all of the described dependencies installed, one can reproduce our results by cloning this repository, and running either of the following in a command line at the root directory, for standard experiments and learning-augmented experiments, respectively:
 
-- Changing value density bounds U/L: `` python3 experiments.py ``
+- Changing value density bounds $U/L$: `` python3 experiments.py ``
 - Changing simulated prediction error: `` python3 experimentsLA.py ``
 
 
