@@ -1,5 +1,7 @@
 # Time Fairness in Online Knapsack Problems
 
+[https://img.shields.io/badge/Full%20Paper-2205.XXXXX-B31B1B.svg?style=flat-square&logo=arxiv](https://arxiv.org)
+
 The online knapsack problem is a classic problem in the field of online algorithms. Its canonical version asks how to pack items of different values and weights arriving online into a capacity-limited knapsack so as to maximize the total value of the admitted items. Although optimal competitive algorithms are known for this problem, they may be fundamentally unfair, i.e., individual items may be treated inequitably in different ways. Inspired by recent attention to fairness in online settings, we develop a natural and practically-relevant notion of time fairness for the online knapsack problem, and show that the existing optimal algorithms perform poorly under this metric. We propose a parameterized deterministic algorithm where the parameter precisely captures the Pareto-optimal trade-off between fairness and competitiveness. We show that randomization is theoretically powerful enough to be simultaneously competitive and fair; however, it does not work well in practice, using trace-driven experiments. To further improve the trade-off between fairness and competitiveness, we develop a fair, robust (competitive), and consistent learning-augmented algorithm with substantial performance improvement in trace-driven experiments.
 
 # Python code 
