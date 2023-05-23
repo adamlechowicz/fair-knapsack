@@ -40,7 +40,7 @@ Given a correctly configured Python environment, with all of the described depen
 > @misc{lechowicz2023fairknapsack, 
 > title={Time Fairness in Online Knapsack Problems},
 > author={Adam Lechowicz and Rik Sengupta and Bo Sun and Shahin Kamali and Mohammad Hajiesmaili},
-> eprint={2305.XXXXX},
+> eprint={2305.13293},
 > year={2023},
 > archivePrefix={arXiv},
 > primaryClass={cs.SI}}
