@@ -43,4 +43,4 @@ Given a correctly configured Python environment, with all of the described depen
 > eprint={2305.13293},
 > year={2023},
 > archivePrefix={arXiv},
-> primaryClass={cs.SI}}
+> primaryClass={cs.LG}}
