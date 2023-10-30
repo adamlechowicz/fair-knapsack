@@ -27,7 +27,7 @@ def ZCLRandomized_unpack(args):
     return k.ZCLRandomized(*args)[0][-1] # profit is returned over time, so just get the final profit
 
 def ECT_unpack(args):
-    return k.ECTNew(*args)[0][-1] # profit is returned over time, so just get the final profit
+    return k.ECT(*args)[0][-1] # profit is returned over time, so just get the final profit
 
 def LAECT_unpack(args): 
     return k.LAECT(*args)[0][-1]  # profit is returned over time, so just get the final profit
