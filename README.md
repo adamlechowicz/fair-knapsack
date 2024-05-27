@@ -37,10 +37,12 @@ Given a correctly configured Python environment, with all of the described depen
 
 # Citation
 
-> @misc{lechowicz2023fairknapsack, 
-> title={Time Fairness in Online Knapsack Problems},
+> @inproceedings{lechowicz2023fairknapsack, 
+> title={{Time Fairness in Online Knapsack Problems}},
 > author={Adam Lechowicz and Rik Sengupta and Bo Sun and Shahin Kamali and Mohammad Hajiesmaili},
 > eprint={2305.13293},
-> year={2023},
+> year={2024},
+> month={May},
+> booktitle={International Conference on Learning Representations, Vienna, Austria},
 > archivePrefix={arXiv},
-> primaryClass={cs.LG}}
+> primaryClass={cs.ML}}
